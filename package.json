@@ -1,0 +1,26 @@
+{
+  "name": "react-from-scratch",
+  "version": "1.0.0",
+  "description": "Challenge to create a simple app by creating a react application from the ground up.",
+  "main": "index.js",
+  "dependencies": {
+    "babel-loader": "^8.1.0",
+    "html-webpack-plugin": "^4.5.0",
+    "webpack": "^5.3.1",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dreardon1021/react-from-scratch.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dreardon1021/react-from-scratch/issues"
+  },
+  "homepage": "https://github.com/dreardon1021/react-from-scratch#readme"
+}
