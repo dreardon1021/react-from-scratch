@@ -3,6 +3,8 @@ import React, { Component } from "react";
 class App extends Component {
   constructor() {
     super();
+    this.addToCounter = this.addToCounter.bind(this);
+    this.subtractFromCounter = this.subtractFromCounter.bind(this)
     this.state = {
       counter: 0
     };
@@ -15,6 +17,7 @@ class App extends Component {
   }
 
   subtractFromCounter() {
+    console.log("test");
     let subtractedCounter = this.state.counter - 1;
     this.setState({ counter: subtractedCounter });
   }
@@ -22,14 +25,11 @@ class App extends Component {
   render() {
     return (
       <div>
-        <p class="counter-count">{this.state.counter}</p>
-        <button onClick={() => this.addToCounter(e)} className="counter-button">
+        <p>counter: {this.state.counter}</p>
+        <button onClick={this.addToCounter}>
           Add
         </button>
-        <button
-          onClick={() => this.subtractFromCounter(e)}
-          className="counter-button"
-        >
+        <button onClick={this.subtractFromCounter}>
           Subtract
         </button>
       </div>
