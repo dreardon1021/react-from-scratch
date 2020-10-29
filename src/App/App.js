@@ -11,13 +11,11 @@ class App extends Component {
   }
 
   addToCounter() {
-    console.log("test");
     let addedCounter = this.state.counter + 1;
     this.setState({ counter: addedCounter });
   }
 
   subtractFromCounter() {
-    console.log("test");
     let subtractedCounter = this.state.counter - 1;
     this.setState({ counter: subtractedCounter });
   }
