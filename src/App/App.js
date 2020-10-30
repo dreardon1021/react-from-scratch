@@ -18,6 +18,8 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.props.counter);
+
     return (
       <div>
         <p>counter: {this.props.counter}</p>
@@ -37,4 +39,4 @@ const mapDispatchToProps = dispatch => ({
   subtractCounter: () => dispatch(subtractCounter())
 });
 
-export default connect(null, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
