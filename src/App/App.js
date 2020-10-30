@@ -1,38 +1,40 @@
 import React, { Component } from "react";
+import { addCounter, subtractCounter } from "../actions";
+import { connect } from "react-redux";
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.addToCounter = this.addToCounter.bind(this);
-    this.subtractFromCounter = this.subtractFromCounter.bind(this)
-    this.state = {
-      counter: 0
-    };
+    this.subtractFromCounter = this.subtractFromCounter.bind(this);
   }
 
   addToCounter() {
-    let addedCounter = this.state.counter + 1;
-    this.setState({ counter: addedCounter });
+    this.props.addCounter();
   }
 
   subtractFromCounter() {
-    let subtractedCounter = this.state.counter - 1;
-    this.setState({ counter: subtractedCounter });
+    this.props.subtractCounter();
   }
 
   render() {
     return (
       <div>
-        <p>counter: {this.state.counter}</p>
-        <button onClick={this.addToCounter}>
-          Add
-        </button>
-        <button onClick={this.subtractFromCounter}>
-          Subtract
-        </button>
+        <p>counter: {this.props.counter}</p>
+        <button onClick={this.addToCounter}>Add</button>
+        <button onClick={this.subtractFromCounter}>Subtract</button>
       </div>
     );
   }
 }
 
-export default App;
+const mapStateToProps = state => ({
+  counter: state.counter
+});
+
+const mapDispatchToProps = dispatch => ({
+  addCounter: () => dispatch(addCounter()),
+  subtractCounter: () => dispatch(subtractCounter())
+});
+
+export default connect(null, mapDispatchToProps)(App);
