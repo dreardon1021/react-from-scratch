@@ -1,4 +1,9 @@
-export const updateCounter = counterChangeType => ({
-  type: 'COUNTER_CHANGE',
+export const addCounter = counterChangeType => ({
+  type: 'ADD_COUNTER',
+  counterChangeType
+})
+
+export const subtractCounter = counterChangeType => ({
+  type: 'SUBTRACT_COUNTER',
   counterChangeType
 })
