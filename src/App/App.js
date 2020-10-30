@@ -8,8 +8,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.props.counter);
-
     return (
       <div>
         <p>counter: {this.props.counter}</p>
