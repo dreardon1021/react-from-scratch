@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import { changeCounter } from './changeCounter'
+import { counter } from './changeCounter'
 
 const rootReducer = combineReducers({
-  changeCounter
+  counter
 })
 
 export default rootReducer
