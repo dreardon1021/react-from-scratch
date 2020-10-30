@@ -5,16 +5,6 @@ import { connect } from "react-redux";
 class App extends Component {
   constructor(props) {
     super(props);
-    this.addToCounter = this.addToCounter.bind(this);
-    this.subtractFromCounter = this.subtractFromCounter.bind(this);
-  }
-
-  addToCounter() {
-    this.props.addCounter();
-  }
-
-  subtractFromCounter() {
-    this.props.subtractCounter();
   }
 
   render() {
@@ -23,8 +13,8 @@ class App extends Component {
     return (
       <div>
         <p>counter: {this.props.counter}</p>
-        <button onClick={this.addToCounter}>Add</button>
-        <button onClick={this.subtractFromCounter}>Subtract</button>
+        <button onClick={this.props.addCounter}>Add</button>
+        <button onClick={this.props.subtractCounter}>Subtract</button>
       </div>
     );
   }
