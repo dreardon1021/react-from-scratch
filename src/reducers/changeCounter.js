@@ -1,4 +1,4 @@
-export const changeCounter = (state = 0, action) => {
+export const counter = (state = 0, action) => {
   console.log("reducer");
   switch (action.type) {
     case "ADD_COUNTER":
